@@ -1,0 +1,46 @@
+from sudoku import *
+s = Sudoku()
+s.setBoxValue(4,0,1)
+s.setBoxValue(7,0,2)
+s.setBoxValue(6,0,3)
+s.setBoxValue(2,0,7)
+s.setBoxValue(9,1,1)
+s.setBoxValue(8,1,2)
+s.setBoxValue(7,1,3)
+s.setBoxValue(4,1,4)
+s.setBoxValue(3,1,5)
+s.setBoxValue(3,2,0)
+s.setBoxValue(5,2,3)
+s.setBoxValue(9,2,4)
+s.setBoxValue(7,2,6)
+s.setBoxValue(8,2,7)
+s.setBoxValue(9,3,2)
+s.setBoxValue(3,3,7)
+s.setBoxValue(6,3,8)
+s.setBoxValue(8,5,0)
+s.setBoxValue(3,5,1)
+s.setBoxValue(2,5,6)
+
+s.setBoxValue(7,6,1)
+s.setBoxValue(1,6,2)
+s.setBoxValue(3,6,4)
+s.setBoxValue(8,6,5)
+s.setBoxValue(2,6,8)
+
+s.setBoxValue(1,7,3)
+s.setBoxValue(5,7,4)
+s.setBoxValue(7,7,5)
+s.setBoxValue(4,7,6)
+s.setBoxValue(6,7,7)
+"""
+s.setBoxValue(8,8,1)
+s.setBoxValue(9,8,5)
+s.setBoxValue(3,8,6)
+s.setBoxValue(7,8,7)
+"""
+
+
+solveur = SolveurSudoku()
+solveur.setPossibilitiesUsingGivenSudoku(s)
+(v,solution) = solveur.solve()
+
